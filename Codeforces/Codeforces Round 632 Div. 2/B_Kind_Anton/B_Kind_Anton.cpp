@@ -1,0 +1,60 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+	long long int t,n,i,f,inc,dec,j;
+	cin>>t;
+	while(t--){
+		inc=1,dec=1;
+		f=1;
+		cin>>n;
+		long long int a[n],b[n];
+		for(i=0;i<n;i++){
+			cin>>a[i];
+		}
+		for(i=0;i<n;i++){
+			cin>>b[i];
+		}
+		if(a[0]!=b[0]){
+			printf("NO\n");
+			continue;
+		}
+		for(i=0;i<n;i++){
+			if(a[i]!=b[i])
+				break;
+		}
+		if(i==n){
+			printf("YES\n");
+			continue;
+		}
+		for(i=1;i<n;i++){
+			if(a[i]<b[i]){
+				f=i;
+				inc=0;
+				break;
+			}
+		}
+		for(i=0;i<f;i++){
+			if(a[i]==1){
+				inc=1;
+				break;
+			}
+		}
+		for(i=1;i<n;i++){
+			if(a[i]>b[i]){
+				f=i;
+				dec=0;
+				break;
+			}
+		}
+		for(i=0;i<f;i++){
+			if(a[i]==-1){
+				dec=1;
+				break;
+			}
+		}
+		if(inc&&dec)
+			printf("YES\n");
+		else
+			printf("NO\n");
+	}
+}

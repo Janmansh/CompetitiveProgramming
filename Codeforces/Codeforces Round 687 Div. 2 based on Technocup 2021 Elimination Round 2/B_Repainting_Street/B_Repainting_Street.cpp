@@ -1,0 +1,52 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define int long long
+#define pb push_back
+#define mod 1000000007
+
+ll powermod(ll x,ll y){
+  if(y==0) return 1;
+  ll temp = powermod( x,y/2 )%mod;
+  if( y%2 ){
+    return (((temp*temp)%mod)*x%mod);
+  }
+  return (temp*temp)%mod;
+}
+
+ll power(ll x,ll y){
+  if(y==0) return 1;
+  ll temp = power( x,y/2 );
+  if( y%2 ){
+    return (((temp*temp))*x);
+  }
+  return (temp*temp);
+}
+
+
+void solve(){
+  ll n,m,r,c,i,j,k; cin>>n>>k;//>>r>>c;
+  ll a[n];
+  for(i=0;i<n;i++)cin>>a[i];
+  int ans=100000000000;
+  for(i=1;i<=100;i++){
+      int l=0;
+      for(j=0;j<n;j++){
+          if(a[j]==i)continue;
+          l++;
+          j+=k-1;
+      }
+      ans=min(ans,l);
+  }
+  cout<<ans<<"\n";return;
+}
+
+signed main(){
+  ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+  ll t=1;
+  cin>>t;  
+  while (t--){
+    solve();
+  }
+  return 0;
+}
