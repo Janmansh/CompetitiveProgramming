@@ -1,0 +1,38 @@
+Test 1 Failed
+
+Input 1: 
+6
+abcdef
+cdedcb
+aaa
+aaaaa
+aab
+baaa
+ab
+b
+abcdef
+abcdef
+ba
+baa
+
+
+Expected Output : 
+YES
+YES
+NO
+YES
+YES
+NO
+
+
+Obtained Output : 
+Yes
+Yes
+No
+Yes
+Yes
+No
+
+
+________________________________________________________
+

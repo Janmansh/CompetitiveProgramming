@@ -1,0 +1,27 @@
+Test 1 Failed
+
+Input 1: 
+4
+ababa
+ba
+ababa
+bb
+aaa
+aaaa
+aababa
+ababa
+
+
+Expected Output : 
+YES
+NO
+NO
+YES
+
+
+Obtained Output : 
+No
+
+
+________________________________________________________
+
